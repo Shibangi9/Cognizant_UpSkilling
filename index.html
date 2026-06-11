@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <h1 style="color:red;">
+        Local Community Event Portal
+    </h1>
+
+    <header id="mainHeader">
+        Welcome to the Community Portal
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="eventCard">
+            <h2>About Our Community</h2>
+
+            <p>
+                Explore upcoming events, workshops,
+                sports competitions and community
+                gatherings happening near you.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Event Controls -->
+    <section id="events">
+
+        <h2>Event Filters</h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search Event Name">
+
+        <br><br>
+
+        <select id="categoryFilter">
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Art">Art</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="submitRegistration()">
+            Test AJAX Request
+        </button>
+
+        <h2>Upcoming Events</h2>
+
+        <!-- JavaScript will insert event cards here -->
+        <div id="eventsContainer"></div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+
+        <h2>Community Event Gallery</h2>
+
+        <table>
+
+            <tr>
+                <td>
+                    <img src="event1.png"
+                         alt="Music Festival"
+                         title="Music Festival"
+                         class="event-img">
+
+                    <p>Music Festival</p>
+                </td>
+
+                <td>
+                    <img src="event2.png"
+                         alt="Sports Meet"
+                         title="Sports Meet"
+                         class="event-img">
+
+                    <p>Sports Meet</p>
+                </td>
+
+                <td>
+                    <img src="event3.png"
+                         alt="Workshop"
+                         title="Workshop"
+                         class="event-img">
+
+                    <p>Workshop</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="event4.png"
+                         alt="Food Fair"
+                         title="Food Fair"
+                         class="event-img">
+
+                    <p>Food Fair</p>
+                </td>
+
+                <td>
+                    <img src="event5.png"
+                         alt="Art Show"
+                         title="Art Show"
+                         class="event-img">
+
+                    <p>Art Show</p>
+                </td>
+
+                <td>
+                    <img src="event6.png"
+                         alt="Community Meeting"
+                         title="Community Meeting"
+                         class="event-img">
+
+                    <p>Community Meeting</p>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register">
+
+        <h2>Event Registration</h2>
+
+        <form id="registrationForm">
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter Name"
+                required>
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required>
+
+            <label>Select Event</label>
+
+            <select name="event">
+                <option>Music Festival</option>
+                <option>Sports Meet</option>
+                <option>Workshop</option>
+                <option>Art Show</option>
+            </select>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Event Schedule Table -->
+    <section>
+
+        <h2>Event Schedule</h2>
+
+        <table>
+
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+
+            <tr>
+                <td>Music Festival</td>
+                <td>15 June 2026</td>
+                <td>City Park</td>
+            </tr>
+
+            <tr>
+                <td>Sports Meet</td>
+                <td>20 June 2026</td>
+                <td>Community Ground</td>
+            </tr>
+
+            <tr>
+                <td>Workshop</td>
+                <td>25 June 2026</td>
+                <td>Town Hall</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Multi-column News -->
+    <section>
+
+        <h2>Community Bulletin</h2>
+
+        <div class="newsArticle">
+
+            Community events help residents connect,
+            learn new skills and build stronger
+            neighbourhood relationships.
+
+            The city council regularly organizes
+            music festivals, sports tournaments,
+            awareness campaigns and educational
+            workshops.
+
+            Citizens are encouraged to participate
+            actively and contribute to making the
+            city a more vibrant and inclusive place.
+
+        </div>
+
+    </section>
+
+    <!-- Video -->
+    <section id="video">
+
+        <h2>Community Event Promo Video</h2>
+
+        <video width="500" controls>
+            <source src="promo.mp4"
+                    type="video/mp4">
+        </video>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
